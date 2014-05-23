@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sshaconfApp">
+<head>
+<base href="/ssha_conf/" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet"
+	href="lib/angular-1.2.9/docs/components/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="lib/angular-1.2.9/docs/css/docs.css" />
+<link rel="stylesheet" href="lib/angular-1.2.9/docs/css/doc_widgets.css" />
+<link rel="stylesheet" href="lib/angular-1.2.9/docs/css/animations.css" />
+<link rel="stylesheet" href="lib/angular-1.2.9/docs/css/prettify.css" />
+<link rel="stylesheet" href="lib/angular-ui-ng-grid/ng-grid.css" />
+<link rel="stylesheet" href="lib/angular-strap-2.0.0-rc.3/css/angular-motion.min.css">
+<link rel="stylesheet" href="css/app.css" />
+<script src="lib/angular-ui-ng-grid/lib/jquery-1.9.1.js"></script>
+<script src="lib/angular-1.2.9/angular.min.js"></script>
+<script src="lib/angular-1.2.9/angular-route.min.js"></script>
+<script src="lib/angular-1.2.9/angular-route.min.js"></script>
+<script src="lib/angular-1.2.9/angular-animate.min.js"></script>
+<script src="lib/angular-1.2.9/angular-sanitize.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/services.js"></script>
+<script src="lib/angular-1.2.9/angular-resource.min.js"></script>
+<script src="lib/angular-ui-ng-grid/ng-grid-2.0.7.debug.js"></script>
+<script src="lib/angular-strap-2.0.0-rc.3/dist/angular-strap.min.js"></script>
+<script src="lib/angular-strap-2.0.0-rc.3/dist/angular-strap.tpl.min.js"></script>
+<title>Social Science History Organization</title>
+</head>
+<body>
+<div style="margin: 10px;">
+	<h1>Social Science History Organization</h1>
+	<!-- nav -->
+	<div class="sshaHeader">
+	<div class="sshaUserInfo">user info | log out</div>
+	<div class="bs-docs-section"
+		ng-controller="DropdownDemoCtrl">
+		<button type="button" style="margin: 1px;"
+			class="btn btn-lg btn-primary dropdown-toggle btn-block" bs-dropdown="mySshaMenu">
+			<i class="icon-white icon-user"></i>&nbsp;My SSHA
+		</button>
+		<button type="button" style="margin: 1px;"
+			class="btn btn-lg btn-primary dropdown-toggle btn-block" bs-dropdown="netRepMenu">
+			<i class="icon-white icon-list"></i>&nbsp;Network Rep Tools
+		</button>
+		<button type="button" style="margin: 1px;"
+			class="btn btn-lg btn-primary dropdown-toggle btn-block" bs-dropdown="adminMenu">
+			<i class="icon-white icon-cog"></i>&nbsp;Administrative
+		</button>
+	</div>
+	</div>
+	
+	<!-- main content -->
+	<div class="sshaMain" ng-view></div>
+	
+	<!-- footer -->
+	<div class="sshaFooter">
+		 Developed by <a target="_blank" href="http://ciser.cornell.edu/" title="Cornell Institute for Social and Economic Research">CISER</a>
+	</div>
+</div>
+</body>
+</html>

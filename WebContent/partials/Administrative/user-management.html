@@ -1,0 +1,12 @@
+
+<h3>{{subtitle}}</h3>
+<br>
+Search:
+	<input ng-model="srchTxt" type="text" name="srchInput" ng-change="searchPeople(srchTxt)"><br>
+<div id="sshaPeopleSrchDiv">
+<ul>
+	<li class="sshaLi" ng-repeat="person in people">
+		<p><a href="#/people/{{person.id}}">{{person.first_name}}&nbsp;{{person.last_name}}</a>, {{person.institution}}</p>
+	</li>
+</ul>
+</div>

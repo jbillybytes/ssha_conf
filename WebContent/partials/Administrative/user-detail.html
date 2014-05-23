@@ -1,0 +1,19 @@
+<div id="sshaBreadCrumbs"><a href="#/people">Users</a> >> User Detail</div>
+<br>
+<h2>{{person.first_name}}&nbsp;{{person.last_name}}</h2>
+ <br>
+<p>{{person.street1}}</p>
+<p>{{person.zip}}</p>
+<p>{{person.phone}}</p>
+<p>{{person.department}}</p>
+<p>{{person.city}}</p>
+
+<hr>
+<h3>Publications</h3>
+<ul>
+	<li class="sshaLi" ng-repeat="pub in personPublications">
+		<p>
+			- <a href="#/publications/{{pub.publication_id}}">{{pub.title}}</a>
+		</p>
+	</li>
+</ul>

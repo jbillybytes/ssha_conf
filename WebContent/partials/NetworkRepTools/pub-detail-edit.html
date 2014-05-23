@@ -1,0 +1,32 @@
+<a href="#/publications/{{publication.id}}">Cancel</a>
+
+<h2>Title</h2>
+<input type="text" class="titleTxt" name="title" value="{{publication.title}}"/>
+ <br><br>
+<strong>Abstract</strong><br>
+<textarea class="txtArea" rows="8" name="abstract">{{publication.abstract}}</textarea><br><br>
+<strong>Primary Network</strong><br>
+<select ng-model="network" name="network" ng-options="n.id as n.name for n in networks"></select><br><br>
+<strong>Status</strong><br>
+<select ng-model="status" name="status" ng-options="s.id as s.name for s in statuses"></select><br><br>
+<strong>Type</strong><br>
+<select ng-model="pub_type" name="pub_type" ng-options="pt.type as pt.type for pt in pub_types"></select><br><br>
+<strong>Session</strong><br>
+<select ng-model="session" name="session" ng-options="ss.id as ss.title for ss in sessions"></select><br><br>
+
+<a href="#" id="pubStatus">{{pubStatus}}</a>
+
+<hr>
+
+<h2>Paper Authors</h2>
+<ul>
+	<li class="sshaLi"
+		ng-repeat="author in publicationAuthors | orderBy: 'position'">
+		<p>
+			<a href="#">(Remove)</a>
+			{{author.first_name}}&nbsp;{{author.last_name}},
+			{{author.institution}}
+		</p>
+	</li>
+</ul>
+<button style="margin-left: 200px" name="addAuthor">Add Author</button>

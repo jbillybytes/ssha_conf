@@ -1,0 +1,61 @@
+<div id="sshaBreadCrumbs">
+	<a href="#/sessions">Sessions</a> >> Session Detail
+</div>
+<br>
+<h2>{{session.title}}</h2>
+<br>
+<strong>Primary Network</strong><p>{{session.networkName}}</p>
+<strong>Status</strong><p>{{session.statusName}}</p>
+<strong>Session Type</strong><p>{{session.type}}</p>
+
+<strong>Session is</strong><p>{{session.is_complete == 1 ? 'Complete' : 'Incomplete'}}</p>
+
+<p>{{session.notes}}</p>
+
+<hr>
+
+<h3>People</h3>
+<ul><li class="sshaLi" ng-repeat="person in sessionPeople">
+		<p><a href="#/people/{{person.peopleid}}">{{person.first_name}}&nbsp;{{person.last_name}}</a>, {{person.role_name}}</p>
+	</li>
+</ul>
+
+<hr>
+
+<h3>Publications</h3>
+<ul><li class="sshaLi" ng-repeat="publication in sessionPublications">
+		<p>{{publication.title}}</p>
+		<p>{{publication.first_name}}&nbsp;{{publication.last_name}}</p>
+		<p>{{publication.type}}</p>
+		<p></p>
+	</li>
+</ul>
+
+<hr> 
+
+<h3>Orphan Papers</h3>
+<ul><li class="sshaLi" ng-repeat="orphanPaper in networkOrphanPapers">
+		<p>{{publication.title}}</p>
+		<p></p>
+	</li>
+</ul>
+
+<hr>
+<h3>Network Representatives</h3>
+<ul><li class="sshaLi" ng-repeat="netrep in networkRepresentatives">
+		<p>{{netrep.first_name}}&nbsp;{{netrep.last_name}}</p>
+		<p>{{netrep.institution}}</p>
+		<p>{{netrep.email}}</p>
+		<p></p>
+	</li>
+</ul>
+<hr> 
+
+<h3>Available Volunteers</h3>
+<ul><li class="sshaLi" ng-repeat="volunteer in sessionAvailableVolunteers">
+		<p>{{volunteer.first_name}}&nbsp;{{volunteer.last_name}}</p>
+		<p>{{volunteer.email}}</p>
+		<p>{{volunteer.institution}}</p>
+		<p></p>
+	</li>
+</ul>

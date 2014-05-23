@@ -1,0 +1,43 @@
+.gridStyle {
+	border: 1px solid rgb(212, 212, 212);
+	width: 1000px;
+	height: 692px;
+}
+#sshaPeopleSrchDiv{
+	margin:20px;
+	width: 950px;
+	height: 550px;
+	overflow: auto;	
+}
+.sshaFooter {
+	display: block;
+	text-align: right;
+	width: 400px;
+	margin-top: 20px;
+	position: relative;
+	left: 600px;
+}
+.sshaHeader {
+	float: right;
+	position: absolute;
+	top: 5px;
+	left: 600px;
+}
+.sshaLi{
+	list-style: none;
+	padding-bottom: 20px;
+}
+.sshaMain {
+	margin-top: 40px;
+}
+.sshaUserInfo {
+	text-align: right;
+	margin-bottom: 20px;
+}
+.txtArea{
+	width: 650px;
+	height: 200px;
+}
+.titleTxt{
+	width: 650px;
+}

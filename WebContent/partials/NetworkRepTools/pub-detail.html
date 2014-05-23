@@ -1,0 +1,25 @@
+<div id="sshaBreadCrumbs"><a href="#/publications">Publications</a> >> Publication Detail</div>
+<br>
+
+<a href="#/publications/{{publication.id}}/edit">Edit</a>
+
+<h2>{{publication.title}}</h2>
+ <br>
+<strong>Abstract</strong>
+<p>{{publication.abstract}}</p>
+<p>{{publication.networkName}}</p>
+<p>{{publication.StatusName}}</p>
+<p>{{publication.type}}</p>
+<p>{{publication.SessionTitle}}</p>
+<p>{{publication.is_submitted}}</p>
+
+<hr>
+
+<h2>Paper Authors</h2>
+<ul><li class="sshaLi" ng-repeat="author in publicationAuthors | orderBy: 'position'">
+		<p>{{author.first_name}}&nbsp;{{author.last_name}}</p>
+		<p>{{author.institution}}</p>
+		<p></p>
+	</li>
+</ul>
+
